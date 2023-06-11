@@ -1,4 +1,13 @@
 :root{
     --background-color: #FFC700;
-    --bs-primary-rgb
+    --bs-primary-rgb: #12296c;
+}
+
+body{
+    font-family: 'sans-serif';
+    background-color: var(--background-color);
+    color: var()--bs-primary-rgb;
+    font-size: 300;
+    font-size: 1.2rem;
+    
 }
