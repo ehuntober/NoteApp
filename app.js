@@ -2,15 +2,25 @@ require('dotenv').config();
 
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
+const connectDB = require('./server/config/db')
+const session = require('express-session')
+const passport = require('passport')
+const MongoStore =require('connect-mongo')
 
 const app = express();
 const port = 5000 || process.env.PORT;
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json())
 
 //static Files
 app.use(express.static('public'));
+
+//connect to Database
+connectDB()
 
 //Templating Engine
 app.use(expressLayouts);
