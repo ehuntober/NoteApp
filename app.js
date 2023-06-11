@@ -20,6 +20,8 @@ app.set('view engine','ejs');
 // Routes
 app.use('/', require('./server/routes/index'))
 
+
+// Handle 404
 app.listen(port,() =>{
     console.log('Express server listening on port ${port}');
 })

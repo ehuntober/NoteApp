@@ -1,6 +1,6 @@
 :root{
-    --background-color: #FFC700;
-    --bs-primary-rgb: #12296c;
+    --background-color:#FFFFFF  ;
+    --bs-primary-rgb:  #333333;
 }
 
 body{
@@ -9,5 +9,23 @@ body{
     color: var()--bs-primary-rgb;
     font-size: 300;
     font-size: 1.2rem;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    /* font-family: cursive; */
+    font-weight: 800;
+}
+
+.container-fluid-custom{
+    max-width: 1600px;
+}
+
+.btn{
+
+    border-radius: 2rem;
+}
+
+.home{
     
 }
