@@ -9,8 +9,8 @@ var GoogleStrategy = require('passport-google-oauth20');
 passport.use(new GoogleStrategy({
     clientID: process.env['GOOGLE_CLIENT_ID'],
     clientSecret: process.env['GOOGLE_CLIENT_SECRET'],
-    // callbackURL: 'https://www.example.com/oauth2/redirect/google',
-    callbackURL: process.env['GOOGLE_CALLBACK_URL'],
+    callbackURL: 'http://localhost:5000/oauth2/redirect/google',
+    // callbackURL: process.env['GOOGLE_CALLBACK_URL'],
 
     scope: [ 'profile' ],
     state: true

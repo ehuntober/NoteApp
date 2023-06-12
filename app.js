@@ -3,15 +3,31 @@ require('dotenv').config();
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const connectDB = require('./server/config/db')
-const session = require('express-session')
+// const session = require('express-session')
 const passport = require('passport')
 const MongoStore =require('connect-mongo')
+
+const session = require('express-session');
+
+
+
 
 const app = express();
 const port = 5000 || process.env.PORT;
 
+// app.use(session({
+//     secret: 'your_secret_key',
+//     resave: false,
+//     saveUninitialized: false
+//   }));
+
 app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.session())
+
+
+
+
+
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json())
